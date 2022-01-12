@@ -1,13 +1,13 @@
-from selenium import webdriver
-
-driver = webdriver.Firefox()
-driver.get("http://www.baidu.com")
-
-driver.set_window_size(800,600)
-driver.find_element_by_id("kw").send_keys("selenium")
-driver.find_element_by_id("su").click()
-
-js = "window.scrollTo(100,450);"
+# from selenium import webdriver
+#
+# driver = webdriver.Firefox()
+# driver.get("http://www.baidu.com")
+#
+# driver.set_window_size(800,600)
+# driver.find_element_by_id("kw").send_keys("selenium")
+# driver.find_element_by_id("su").click()
+#
+# js = "window.scrollTo(100,450);"
 
 # 按照设置的格式打印cookie
 # from selenium import webdriver
@@ -50,26 +50,25 @@ js = "window.scrollTo(100,450);"
 #
 # driver.quit()
 
+from time import sleep
+
 # 使用切换表单的形式进行QQ邮箱的登录，程序进行到滑动验证
-# from selenium import webdriver
-# from time import sleep
-# from selenium.webdriver.common.keys import Keys
-#
-# driver = webdriver.Firefox()
-# driver.get("https://mail.qq.com/")
-# sleep(2)
-#
-# driver.switch_to.frame("login_frame")
-# driver.find_element_by_id("u").send_keys("1492517451")
-# driver.find_element_by_id("p").send_keys("RONALDO.TE")
-# sleep(2)
-# driver.find_element_by_xpath('//*[@id="login_button"]').send_keys(Keys.ENTER)
-# sleep(3)
-# driver.switch_to.default_content()
-#
-# driver.quit()
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
+driver = webdriver.Firefox()
+driver.get("https://mail.qq.com/")
+sleep(2)
 
+driver.switch_to.frame("login_frame")
+driver.find_element_by_id("u").send_keys("1492517451")
+driver.find_element_by_id("p").send_keys("RONALDO.TE")
+sleep(2)
+driver.find_element_by_xpath('//*[@id="login_button"]').send_keys(Keys.ENTER)
+sleep(3)
+driver.switch_to.default_content()
+
+driver.quit()
 
 # from selenium import webdriver  #利用Xpath匹配一组元素
 # from time import sleep
