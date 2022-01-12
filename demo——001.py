@@ -142,9 +142,9 @@ from selenium import webdriver  # 利用By定位元素
 driver = webdriver.Firefox()
 driver.get("http://www.baidu.com/")
 
-# driver.find_element(By.NAME,"wd").send_keys("selenium")
-# driver.find_element(By.CLASS_NAME,"s_ipt").send_keys("ming")
-# driver.find_element(By.ID,"kw").send_keys("广州恒太")
+driver.find_element(By.NAME, "wd").send_keys("selenium")
+driver.find_element(By.CLASS_NAME, "s_ipt").send_keys("ming")
+driver.find_element(By.ID, "kw").send_keys("广州恒太")
 sleep(3)
 
 driver.quit()
