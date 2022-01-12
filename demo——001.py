@@ -50,25 +50,25 @@
 #
 # driver.quit()
 
-from time import sleep
-
-# 使用切换表单的形式进行QQ邮箱的登录，程序进行到滑动验证
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
-driver = webdriver.Firefox()
-driver.get("https://mail.qq.com/")
-sleep(2)
-
-driver.switch_to.frame("login_frame")
-driver.find_element_by_id("u").send_keys("1492517451")
-driver.find_element_by_id("p").send_keys("RONALDO.TE")
-sleep(2)
-driver.find_element_by_xpath('//*[@id="login_button"]').send_keys(Keys.ENTER)
-sleep(3)
-driver.switch_to.default_content()
-
-driver.quit()
+# from time import sleep
+#
+# # 使用切换表单的形式进行QQ邮箱的登录，程序进行到滑动验证
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
+#
+# driver = webdriver.Firefox()
+# driver.get("https://mail.qq.com/")
+# sleep(2)
+#
+# driver.switch_to.frame("login_frame")
+# driver.find_element_by_id("u").send_keys("1492517451")
+# driver.find_element_by_id("p").send_keys("RONALDO.TE")
+# sleep(2)
+# driver.find_element_by_xpath('//*[@id="login_button"]').send_keys(Keys.ENTER)
+# sleep(3)
+# driver.switch_to.default_content()
+#
+# driver.quit()
 
 # from selenium import webdriver  #利用Xpath匹配一组元素
 # from time import sleep
@@ -135,20 +135,19 @@ driver.quit()
 # sleep(3)
 # driver.quit()
 
-# from selenium import webdriver  '#利用By定位元素
-# from selenium.webdriver.common.by import By
-# from time import sleep
-#
-#
-# driver = webdriver.Firefox()
-# driver.get("http://www.baidu.com/")
-#
-# # driver.find_element(By.NAME,"wd").send_keys("selenium")
-# # driver.find_element(By.CLASS_NAME,"s_ipt").send_keys("ming")
-# # driver.find_element(By.ID,"kw").send_keys("广州恒太")
-# sleep(3)
-#
-# driver.quit()
+from time import sleep
+
+from selenium import webdriver  # 利用By定位元素
+
+driver = webdriver.Firefox()
+driver.get("http://www.baidu.com/")
+
+# driver.find_element(By.NAME,"wd").send_keys("selenium")
+# driver.find_element(By.CLASS_NAME,"s_ipt").send_keys("ming")
+# driver.find_element(By.ID,"kw").send_keys("广州恒太")
+sleep(3)
+
+driver.quit()
 
 # from selenium import webdriver
 # from time import sleep
